@@ -1,11 +1,19 @@
- int po = 450;
- int p = 450;
+
+ int x2 = 780;
+ int x1 = 120;
 void setup(){
 size(900,900);
 noFill();
 }
 void draw(){
-for(int i = 8; i > 0; i--){
+  if(x1 == 900){
+    x1 = 120;
+  }
+    if(x2 == 0){
+    x2 = 780;
+  }
+ background(#4800F5);
+for(int i = 40; i > 0; i--){
   if(i % 2 == 0){
 
   }
@@ -13,11 +21,12 @@ for(int i = 8; i > 0; i--){
 {
 
 }
-  ellipse(p,450,i*50,i*50);
+  ellipse(x1,450,i*10,i*10);
 }
-p++;
+x1++;
+x1++;
 size(900,900);
-for(int i = 8; i > 0; i--){
+for(int i = 40; i > 0; i--){
   if(i % 2 == 0){
 
   }
@@ -25,7 +34,8 @@ for(int i = 8; i > 0; i--){
 {
 
 }
-  ellipse(po,450,i*50,i*50);
+  ellipse(x2,450,i*10,i*10);
 }
-po--;
+x2--;
+x2--;
 }
